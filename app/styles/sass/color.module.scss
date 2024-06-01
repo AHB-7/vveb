@@ -1,0 +1,11 @@
+$brand-primary: #134b57;
+$brand-secondary: #ffc107;
+
+.brand {
+  &-dark {
+    color: $brand-primary;
+  }
+  &-light {
+    color: $brand-secondary;
+  }
+}

@@ -10,4 +10,3 @@ export default function Home() {
         </main>
     );
 }
-// ,theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400)
