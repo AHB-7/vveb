@@ -1,7 +1,9 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CgScreen } from "react-icons/cg";
+import { GrArticle } from "react-icons/gr";
+import { SiInformatica } from "react-icons/si";
 
 export default function Nav() {
     const pathname = usePathname();
@@ -10,29 +12,29 @@ export default function Nav() {
         <nav className="inline-flex gap-4 my-4">
             <Link
                 href="/"
-                className={`${
-                    pathname === "/" ? "text-amber-300" : "text-slate-200"
+                className={`border rounded-md h-8 w-20 flex place-content-center place-items-center ${
+                    pathname === "/" ? "text-amber-300 " : "text-slate-200"
                 } hover:text-amber-200 transition-colors duration-400`}
             >
-                <p>Home</p>
+                <CgScreen /> <p>Home</p>
             </Link>
             <Link
                 href="/articles"
-                className={`${
+                className={`border rounded-md h-12 w-16 flex flex-col place-content-center place-items-center ${
                     pathname === "/articles"
                         ? "text-amber-300"
                         : "text-slate-200"
                 } hover:text-amber-200 transition-colors duration-400`}
             >
-                <p>Articles</p>
+                <GrArticle /> <p>Articles</p>
             </Link>
             <Link
                 href="/about"
-                className={`${
+                className={`border rounded-md h-12 w-16 flex flex-col place-content-center place-items-center ${
                     pathname === "/about" ? "text-amber-300" : "text-slate-200"
                 } hover:text-amber-200 transition-colors duration-400`}
             >
-                <p>About</p>
+                <SiInformatica /> <p>About</p>
             </Link>
         </nav>
     );

@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <main className="flex flex-col content-center items-center">
             <Nav />
-            <H1 content="Welcome to my website" />
+            <H1 content="WebStasjon" />
         </main>
     );
 }
