@@ -1,16 +1,13 @@
-"use client";
-
-import { Header } from "@/lib/components/header";
-import Nav from "@/lib/components/nav";
-import "@/app/globals.css";
+import Image from "next/image";
+import Nav from "./components/nav";
+import H1 from "./components/h1";
 
 export default function Home() {
     return (
-        <>
+        <main className="flex flex-col content-center items-center">
             <Nav />
-            <main className="flex min-h-screen flex-col items-center justify-between p-24">
-                <Header />
-            </main>
-        </>
+            <H1 content="Welcome to my website" />
+        </main>
     );
 }
+// ,theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400)
