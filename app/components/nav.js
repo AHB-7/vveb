@@ -1,15 +1,19 @@
 'use client'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CgScreen } from 'react-icons/cg'
 import { GrArticle } from 'react-icons/gr'
 import { SiInformatica } from 'react-icons/si'
+
 import colorstyles from '../styles/sass/color.module.scss'
 import buttonStyles from '../styles/sass/buttons.module.scss'
 
+// import buttonStyles from '../styles/sass/buttons.module.scss'
+
 export default function Nav() {
   const pathname = usePathname()
-  const defualtState = `shadow-lg shadow-salty-500 bg-gradient-to-r from-green-400 to-blue-500 border rounded-md h-8 w-20 flex place-content-center place-items-center`
+  const defualtState = `shadow-lg shadow-salty-500 bg-gradient-to-r from-brand-950 to-natural-600 border rounded-md h-8 w-20 flex place-content-center place-items-center`
   const hoverState = `hover:text-amber-200 transition-colors duration-400`
 
   return (
@@ -18,7 +22,7 @@ export default function Nav() {
         href="/"
         className={`${defualtState} ${
           pathname === '/'
-            ? colorstyles['brand-light']
+            ? `${colorstyles['brand-light']} ${buttonStyles['button-primary']}`
             : colorstyles['brand-dark']
         } ${hoverState}`}
       >
