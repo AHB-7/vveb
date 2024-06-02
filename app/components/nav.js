@@ -13,17 +13,16 @@ import buttonStyles from '../styles/sass/buttons.module.scss'
 
 export default function Nav() {
   const pathname = usePathname()
-  const defualtState = `shadow-lg shadow-salty-500 bg-gradient-to-r from-brand-950 to-natural-600 border rounded-md h-8 w-20 flex place-content-center place-items-center`
-  const hoverState = `hover:text-amber-200 transition-colors duration-400`
+  const defualtState =
+    'hidden md:flex text-brand-950 w-4/12 flex place-content-center place-items-center font-semibold'
+  const hoverState = `hover:text-brand-800 transition-colors duration-400 ease-in-out`
 
   return (
-    <nav className="inline-flex gap-4 my-4">
+    <nav className=" container inline-flex align-middle justify-between shadow-md shadow-brand-700 my-0 rounded-lg w-full h-14">
       <Link
         href="/"
         className={`${defualtState} ${
-          pathname === '/'
-            ? `${colorstyles['brand-light']} ${buttonStyles['button-primary']}`
-            : colorstyles['brand-dark']
+          pathname === '/' ? 'text-brand-800' : `${defualtState}`
         } ${hoverState}`}
       >
         <CgScreen /> <p>Home</p>
@@ -31,9 +30,7 @@ export default function Nav() {
       <Link
         href="/articles"
         className={`${defualtState} ${
-          pathname === '/articles'
-            ? colorstyles['brand-light']
-            : colorstyles['brand-dark']
+          pathname === '/articles' ? 'text-brand-800' : `${defualtState}`
         } ${hoverState}`}
       >
         <GrArticle /> <p>Articles</p>
@@ -41,9 +38,7 @@ export default function Nav() {
       <Link
         href="/about"
         className={`${defualtState} ${
-          pathname === '/about'
-            ? colorstyles['brand-light']
-            : colorstyles['brand-dark']
+          pathname === '/about' ? 'text-brand-800' : `${defualtState}`
         } ${hoverState}`}
       >
         <SiInformatica /> <p>About</p>
